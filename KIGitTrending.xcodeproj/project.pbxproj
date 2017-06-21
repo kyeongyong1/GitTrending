@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112F3ABCB3CEAA4952BACD82 /* Pods_KIGitTrendingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CE32BCD15E5B78957C3D19 /* Pods_KIGitTrendingTests.framework */; };
+		297DFAC39E1D5D771E88055F /* Pods_KIGitTrendingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B166E8D3A5207675D0D1C77F /* Pods_KIGitTrendingUITests.framework */; };
 		8F09ECD11EF29F1900F85D71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09ECD01EF29F1900F85D71 /* AppDelegate.swift */; };
 		8F09ECD31EF29F1900F85D71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09ECD21EF29F1900F85D71 /* ViewController.swift */; };
 		8F09ECD61EF29F1900F85D71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F09ECD41EF29F1900F85D71 /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		8F09ECDE1EF29F1900F85D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F09ECDC1EF29F1900F85D71 /* LaunchScreen.storyboard */; };
 		8F09ECE91EF29F1900F85D71 /* KIGitTrendingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09ECE81EF29F1900F85D71 /* KIGitTrendingTests.swift */; };
 		8F09ECF41EF29F1900F85D71 /* KIGitTrendingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09ECF31EF29F1900F85D71 /* KIGitTrendingUITests.swift */; };
+		EB25E9D4EC7BAF01449C7388 /* Pods_KIGitTrending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F287D36F28ED3FA6320F6079 /* Pods_KIGitTrending.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021D301CD2A6DE2B278B9DD6 /* Pods-KIGitTrendingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KIGitTrendingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KIGitTrendingTests/Pods-KIGitTrendingTests.release.xcconfig"; sourceTree = "<group>"; };
+		16CE32BCD15E5B78957C3D19 /* Pods_KIGitTrendingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIGitTrendingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2E1CED055B566B000007E5 /* Pods-KIGitTrendingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KIGitTrendingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KIGitTrendingUITests/Pods-KIGitTrendingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		88D028431F8F895F35995BCD /* Pods-KIGitTrendingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KIGitTrendingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KIGitTrendingTests/Pods-KIGitTrendingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F09ECCD1EF29F1900F85D71 /* KIGitTrending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KIGitTrending.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F09ECD01EF29F1900F85D71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F09ECD21EF29F1900F85D71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +56,11 @@
 		8F09ECEF1EF29F1900F85D71 /* KIGitTrendingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KIGitTrendingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F09ECF31EF29F1900F85D71 /* KIGitTrendingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIGitTrendingUITests.swift; sourceTree = "<group>"; };
 		8F09ECF51EF29F1900F85D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DE358FA0DC72B3653F84B99 /* Pods-KIGitTrendingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KIGitTrendingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KIGitTrendingUITests/Pods-KIGitTrendingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B166E8D3A5207675D0D1C77F /* Pods_KIGitTrendingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIGitTrendingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8446A798D97F75F123BF3F /* Pods-KIGitTrending.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KIGitTrending.release.xcconfig"; path = "Pods/Target Support Files/Pods-KIGitTrending/Pods-KIGitTrending.release.xcconfig"; sourceTree = "<group>"; };
+		F287D36F28ED3FA6320F6079 /* Pods_KIGitTrending.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIGitTrending.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA265591C5556FF1F04AEFE /* Pods-KIGitTrending.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KIGitTrending.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KIGitTrending/Pods-KIGitTrending.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB25E9D4EC7BAF01449C7388 /* Pods_KIGitTrending.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112F3ABCB3CEAA4952BACD82 /* Pods_KIGitTrendingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				297DFAC39E1D5D771E88055F /* Pods_KIGitTrendingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				8F09ECE71EF29F1900F85D71 /* KIGitTrendingTests */,
 				8F09ECF21EF29F1900F85D71 /* KIGitTrendingUITests */,
 				8F09ECCE1EF29F1900F85D71 /* Products */,
+				D52A77BED6F838A38EAD8E5D /* Pods */,
+				DFF79630C391D28BD33B73BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,29 @@
 			path = KIGitTrendingUITests;
 			sourceTree = "<group>";
 		};
+		D52A77BED6F838A38EAD8E5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAA265591C5556FF1F04AEFE /* Pods-KIGitTrending.debug.xcconfig */,
+				DE8446A798D97F75F123BF3F /* Pods-KIGitTrending.release.xcconfig */,
+				88D028431F8F895F35995BCD /* Pods-KIGitTrendingTests.debug.xcconfig */,
+				021D301CD2A6DE2B278B9DD6 /* Pods-KIGitTrendingTests.release.xcconfig */,
+				9DE358FA0DC72B3653F84B99 /* Pods-KIGitTrendingUITests.debug.xcconfig */,
+				3A2E1CED055B566B000007E5 /* Pods-KIGitTrendingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DFF79630C391D28BD33B73BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F287D36F28ED3FA6320F6079 /* Pods_KIGitTrending.framework */,
+				16CE32BCD15E5B78957C3D19 /* Pods_KIGitTrendingTests.framework */,
+				B166E8D3A5207675D0D1C77F /* Pods_KIGitTrendingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F09ECF81EF29F1900F85D71 /* Build configuration list for PBXNativeTarget "KIGitTrending" */;
 			buildPhases = (
+				3C8BEB32C1CAF7C6B596130A /* [CP] Check Pods Manifest.lock */,
 				8F09ECC91EF29F1900F85D71 /* Sources */,
 				8F09ECCA1EF29F1900F85D71 /* Frameworks */,
 				8F09ECCB1EF29F1900F85D71 /* Resources */,
+				026DD00EC95F60B4023B7203 /* [CP] Embed Pods Frameworks */,
+				FCF43ABF6DA8CD06B9FECA41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F09ECFB1EF29F1900F85D71 /* Build configuration list for PBXNativeTarget "KIGitTrendingTests" */;
 			buildPhases = (
+				0F55D1041D4ECE87259A616E /* [CP] Check Pods Manifest.lock */,
 				8F09ECE01EF29F1900F85D71 /* Sources */,
 				8F09ECE11EF29F1900F85D71 /* Frameworks */,
 				8F09ECE21EF29F1900F85D71 /* Resources */,
+				399960248D57BD6B94DE65FB /* [CP] Embed Pods Frameworks */,
+				12917ECD56E3EE174D0422BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F09ECFE1EF29F1900F85D71 /* Build configuration list for PBXNativeTarget "KIGitTrendingUITests" */;
 			buildPhases = (
+				227B53135ED3C68A485BC7B8 /* [CP] Check Pods Manifest.lock */,
 				8F09ECEB1EF29F1900F85D71 /* Sources */,
 				8F09ECEC1EF29F1900F85D71 /* Frameworks */,
 				8F09ECED1EF29F1900F85D71 /* Resources */,
+				0F5E39F2E6460FEC357E8404 /* [CP] Embed Pods Frameworks */,
+				55A1CB55854232151D72EEBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		026DD00EC95F60B4023B7203 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KIGitTrending/Pods-KIGitTrending-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F55D1041D4ECE87259A616E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0F5E39F2E6460FEC357E8404 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KIGitTrendingUITests/Pods-KIGitTrendingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12917ECD56E3EE174D0422BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KIGitTrendingTests/Pods-KIGitTrendingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		227B53135ED3C68A485BC7B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		399960248D57BD6B94DE65FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KIGitTrendingTests/Pods-KIGitTrendingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C8BEB32C1CAF7C6B596130A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		55A1CB55854232151D72EEBA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KIGitTrendingUITests/Pods-KIGitTrendingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCF43ABF6DA8CD06B9FECA41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KIGitTrending/Pods-KIGitTrending-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F09ECC91EF29F1900F85D71 /* Sources */ = {
@@ -416,6 +603,7 @@
 		};
 		8F09ECF91EF29F1900F85D71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAA265591C5556FF1F04AEFE /* Pods-KIGitTrending.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KIGitTrending/Info.plist;
@@ -428,6 +616,7 @@
 		};
 		8F09ECFA1EF29F1900F85D71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE8446A798D97F75F123BF3F /* Pods-KIGitTrending.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KIGitTrending/Info.plist;
@@ -440,6 +629,7 @@
 		};
 		8F09ECFC1EF29F1900F85D71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88D028431F8F895F35995BCD /* Pods-KIGitTrendingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +644,7 @@
 		};
 		8F09ECFD1EF29F1900F85D71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 021D301CD2A6DE2B278B9DD6 /* Pods-KIGitTrendingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +659,7 @@
 		};
 		8F09ECFF1EF29F1900F85D71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DE358FA0DC72B3653F84B99 /* Pods-KIGitTrendingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = KIGitTrendingUITests/Info.plist;
@@ -481,6 +673,7 @@
 		};
 		8F09ED001EF29F1900F85D71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A2E1CED055B566B000007E5 /* Pods-KIGitTrendingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = KIGitTrendingUITests/Info.plist;
