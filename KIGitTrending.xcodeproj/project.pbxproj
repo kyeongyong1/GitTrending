@@ -16,6 +16,8 @@
 		8F09ECDE1EF29F1900F85D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F09ECDC1EF29F1900F85D71 /* LaunchScreen.storyboard */; };
 		8F09ECE91EF29F1900F85D71 /* KIGitTrendingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09ECE81EF29F1900F85D71 /* KIGitTrendingTests.swift */; };
 		8F09ECF41EF29F1900F85D71 /* KIGitTrendingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09ECF31EF29F1900F85D71 /* KIGitTrendingUITests.swift */; };
+		9B4293061EFF4E600010B9F4 /* GitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4293051EFF4E600010B9F4 /* GitData.swift */; };
+		9B42930A1EFFA9180010B9F4 /* DetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4293091EFFA9180010B9F4 /* DetailWebViewController.swift */; };
 		9B95B7E81EFABA6000678112 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95B7E71EFABA6000678112 /* ListViewController.swift */; };
 		EB25E9D4EC7BAF01449C7388 /* Pods_KIGitTrending.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F287D36F28ED3FA6320F6079 /* Pods_KIGitTrending.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,8 @@
 		8F09ECEF1EF29F1900F85D71 /* KIGitTrendingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KIGitTrendingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F09ECF31EF29F1900F85D71 /* KIGitTrendingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIGitTrendingUITests.swift; sourceTree = "<group>"; };
 		8F09ECF51EF29F1900F85D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4293051EFF4E600010B9F4 /* GitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitData.swift; sourceTree = "<group>"; };
+		9B4293091EFFA9180010B9F4 /* DetailWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWebViewController.swift; sourceTree = "<group>"; };
 		9B95B7E71EFABA6000678112 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		9DE358FA0DC72B3653F84B99 /* Pods-KIGitTrendingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KIGitTrendingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KIGitTrendingUITests/Pods-KIGitTrendingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B166E8D3A5207675D0D1C77F /* Pods_KIGitTrendingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIGitTrendingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,11 +122,13 @@
 			children = (
 				8F09ECD01EF29F1900F85D71 /* AppDelegate.swift */,
 				8F09ECD41EF29F1900F85D71 /* Main.storyboard */,
+				9B4293091EFFA9180010B9F4 /* DetailWebViewController.swift */,
 				9B95B7E71EFABA6000678112 /* ListViewController.swift */,
 				8F09ECDA1EF29F1900F85D71 /* Assets.xcassets */,
 				8F09ECDC1EF29F1900F85D71 /* LaunchScreen.storyboard */,
 				8F09ECDF1EF29F1900F85D71 /* Info.plist */,
 				8F09ECD71EF29F1900F85D71 /* KIGitTrending.xcdatamodeld */,
+				9B4293051EFF4E600010B9F4 /* GitData.swift */,
 			);
 			path = KIGitTrending;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 				TargetAttributes = {
 					8F09ECCC1EF29F1900F85D71 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 2HLNWTACRJ;
 						ProvisioningStyle = Automatic;
 					};
 					8F09ECE31EF29F1900F85D71 = {
@@ -451,7 +458,9 @@
 			files = (
 				8F09ECD91EF29F1900F85D71 /* KIGitTrending.xcdatamodeld in Sources */,
 				9B95B7E81EFABA6000678112 /* ListViewController.swift in Sources */,
+				9B4293061EFF4E600010B9F4 /* GitData.swift in Sources */,
 				8F09ECD11EF29F1900F85D71 /* AppDelegate.swift in Sources */,
+				9B42930A1EFFA9180010B9F4 /* DetailWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +615,7 @@
 			baseConfigurationReference = FAA265591C5556FF1F04AEFE /* Pods-KIGitTrending.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2HLNWTACRJ;
 				INFOPLIST_FILE = KIGitTrending/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyeong.KIGitTrending;
@@ -619,6 +629,7 @@
 			baseConfigurationReference = DE8446A798D97F75F123BF3F /* Pods-KIGitTrending.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2HLNWTACRJ;
 				INFOPLIST_FILE = KIGitTrending/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyeong.KIGitTrending;
