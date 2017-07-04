@@ -11,29 +11,58 @@ import UIKit
 import Kanna
 import WebKit
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var languageButton: UIButton!
-    @IBOutlet weak var dateButton: UIButton!
-    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var languageTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    weak var datePickerView = UIPickerView()
+    weak var languagePickerView = UIPickerView()
     
+    var basicUrl = "https://github.com/trending"
+    var currentUrl: String = ""
     var dateList = [String]()
     var languageList = [String]()
     var trendingList = Array<GitData>()
     let reuseIdentifier = "TrendingListCell"
-    
+    var isDate: Bool?
     
     override func viewDidLoad() {
-        htmlParsing()
+        
+        currentUrl = basicUrl
+        htmlParsing(url: basicUrl)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 150
-        dateList = ["today ","this week", "this month"]
+        dateList = ["today", "this week", "this month"]
+
+        let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 30)
+        let keyBoardToolBar = KeyBoardToolBar(frame: frame)
+        keyBoardToolBar.keyBoardDelegate = self
+        let datePickerView = UIPickerView()
+        datePickerView.dataSource = self
+        datePickerView.delegate = self
+        datePickerView.tag = 1
+        self.datePickerView = datePickerView
+        dateTextField.inputView = datePickerView
+        dateTextField.inputAccessoryView = keyBoardToolBar
+        
+        let keyBoardToolBar2 = KeyBoardToolBar(frame: frame)
+        keyBoardToolBar2.keyBoardDelegate = self
+        let languagePickerView = UIPickerView()
+        languagePickerView.dataSource = self
+        languagePickerView.delegate = self
+        languagePickerView.tag = 2
+        self.languagePickerView = languagePickerView
+        languageTextField.inputView = languagePickerView
+        languageTextField.inputAccessoryView = keyBoardToolBar2
+        
     }
     
-    func htmlParsing() {
+    func htmlParsing(url: String) {
+       
+        resetTrendingList()
         
-        guard let apiURL = NSURL(string: "https://github.com/trending") else {
+        guard let apiURL = NSURL(string: url) else {
             return
         }
         
@@ -42,7 +71,7 @@ class ListViewController: UIViewController {
             for link in doc.css("li") {
 
                 let gitData = GitData()
-            
+                
                 for atom in link.css("a") {
                     if atom.className != nil {
                         if (atom.className?.contains("filter-item"))! {
@@ -65,7 +94,7 @@ class ListViewController: UIViewController {
                             if atom.className == nil {
                                 continue
                             }
-                            if atom.className! == "mr-3" {
+                            if atom.className! == "d-inline-block mr-3" {
                                 gitData.language = atom.text!.trimmingCharacters(in: .whitespacesAndNewlines)
                             } else if atom.className! == "float-right" {
                                 gitData.todayStar = atom.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -89,6 +118,8 @@ class ListViewController: UIViewController {
                 trendingList.append(gitData)
             }
         }
+        languageList.append("Swift")
+        languageList.append("Objective-c")
     }
     
     func translatedArray(string: String) -> Array<String> {
@@ -104,17 +135,100 @@ class ListViewController: UIViewController {
         return translatedArray
     }
     
-    @IBAction func languageButtonTouched(_ sender: UIButton) {
-        
-        
-        
+    @IBAction func languageTouch(_ sender: UITextField) {
+        isDate = false
     }
-    
-    @IBAction func dateButtonTouched(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.5) { 
-            self.pickerView.alpha = 1
+    @IBAction func dateTouched(_ sender: UITextField) {
+        isDate = true
+    }
+
+    @IBAction func textFieldDidEndEditing(_ sender: UITextField) {
+        if (dateTextField?.isFirstResponder)! {
+            dateTextField.resignFirstResponder()
+            datePickerView?.resignFirstResponder()
+        } else if (languageTextField?.isFirstResponder)! {
+            languageTextField.resignFirstResponder()
+            languagePickerView?.resignFirstResponder()
+        }
+    }
+  
+    func doneButtonTouched() {
+
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        view.addSubview(activityIndicator)
+        activityIndicator.snp.makeConstraints({ (make) in
+            make.edges.equalTo(self.view)
+        })
+        activityIndicator.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
+            activityIndicator.stopAnimating()
         }
         
+        textFieldDidEndEditing(UITextField())
+        
+        if isDate == true {
+            guard let selectedRow = datePickerView?.selectedRow(inComponent: 0) else { return }
+            let date = dateList[selectedRow]
+            dateTextField.text = "Trending:\(date)"
+            
+            if (currentUrl.contains("?")) {
+                let component = currentUrl.components(separatedBy: "?")
+                currentUrl = component[0]
+            }
+    
+            var postFix = ""
+            if selectedRow == 0 {
+                postFix = "?since=daily"
+            } else if selectedRow == 1 {
+                postFix = "?since=weekly"
+            } else {
+                postFix = "?since=monthly"
+            }
+
+            currentUrl = "\(currentUrl)\(postFix)"
+            
+            
+            htmlParsing(url: currentUrl)
+            
+            tableView.reloadData()
+    
+        } else {
+            guard let selectedRow = languagePickerView?.selectedRow(inComponent: 0) else { return }
+            if selectedRow == 0 || selectedRow == 1 {
+                activityIndicator.stopAnimating()
+                return
+            }
+            let language = languageList[selectedRow]
+            languageTextField.text = "Language:\(language)"
+           
+            if currentUrl.contains("?") {
+                let component = currentUrl.components(separatedBy: "?")
+                let postFix = component[1]
+                currentUrl = "\(basicUrl)/\(language)"
+                currentUrl.append("?\(postFix)")
+            } else {
+                currentUrl = "\(basicUrl)/\(language)"
+            }
+            
+            htmlParsing(url: currentUrl)
+            
+            tableView.reloadData()
+        }
+        
+       
+    }
+    
+    func cancelButtonTouched() {
+        if isDate == true {
+            dateTextField.resignFirstResponder()
+        } else {
+            languageTextField.resignFirstResponder()
+        }
+    }
+    
+    func resetTrendingList() {
+        trendingList.removeAll()
+        languageList.removeAll()
     }
     
 }
@@ -151,7 +265,7 @@ extension String {
 }
 
 
-extension ListViewController: UITableViewDataSource {
+extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return trendingList.count
@@ -163,13 +277,30 @@ extension ListViewController: UITableViewDataSource {
         cell.configure(data: trendingList[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if dateTextField.isFirstResponder {
+            dateTextField.resignFirstResponder()
+        } else if languageTextField.isFirstResponder {
+            languageTextField.resignFirstResponder()
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if dateTextField.isFirstResponder {
+            dateTextField.resignFirstResponder()
+        } else if languageTextField.isFirstResponder {
+            languageTextField.resignFirstResponder()
+        }
+    }
 }
 
 
 extension ListViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        
         if segue.identifier == "detail_git" {
         
             let thisCell = sender as! ListTableViewCell
@@ -186,11 +317,24 @@ extension ListViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.dateList.count
+        if pickerView.tag == 1 {
+            return dateList.count
+        } else if pickerView.tag == 2 {
+            return languageList.count
+        }
+        return 0
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.dateList[row]
+        if pickerView.tag == 1 {
+            return dateList[row]
+        } else if pickerView.tag == 2 {
+            return languageList[row]
+        }
+        return String()
     }
+    
 }
 

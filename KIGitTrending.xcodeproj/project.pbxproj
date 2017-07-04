@@ -16,6 +16,7 @@
 		8F09ECDE1EF29F1900F85D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F09ECDC1EF29F1900F85D71 /* LaunchScreen.storyboard */; };
 		8F09ECE91EF29F1900F85D71 /* KIGitTrendingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09ECE81EF29F1900F85D71 /* KIGitTrendingTests.swift */; };
 		8F09ECF41EF29F1900F85D71 /* KIGitTrendingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09ECF31EF29F1900F85D71 /* KIGitTrendingUITests.swift */; };
+		9B1A74A31F0292120047B3E0 /* KeyBoardToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A74A21F0292120047B3E0 /* KeyBoardToolBar.swift */; };
 		9B4293061EFF4E600010B9F4 /* GitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4293051EFF4E600010B9F4 /* GitData.swift */; };
 		9B42930A1EFFA9180010B9F4 /* DetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4293091EFFA9180010B9F4 /* DetailWebViewController.swift */; };
 		9B95B7E81EFABA6000678112 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95B7E71EFABA6000678112 /* ListViewController.swift */; };
@@ -57,6 +58,7 @@
 		8F09ECEF1EF29F1900F85D71 /* KIGitTrendingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KIGitTrendingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F09ECF31EF29F1900F85D71 /* KIGitTrendingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIGitTrendingUITests.swift; sourceTree = "<group>"; };
 		8F09ECF51EF29F1900F85D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B1A74A21F0292120047B3E0 /* KeyBoardToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBoardToolBar.swift; sourceTree = "<group>"; };
 		9B4293051EFF4E600010B9F4 /* GitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitData.swift; sourceTree = "<group>"; };
 		9B4293091EFFA9180010B9F4 /* DetailWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWebViewController.swift; sourceTree = "<group>"; };
 		9B95B7E71EFABA6000678112 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				8F09ECD41EF29F1900F85D71 /* Main.storyboard */,
 				9B4293091EFFA9180010B9F4 /* DetailWebViewController.swift */,
 				9B95B7E71EFABA6000678112 /* ListViewController.swift */,
+				9B1A74A21F0292120047B3E0 /* KeyBoardToolBar.swift */,
 				8F09ECDA1EF29F1900F85D71 /* Assets.xcassets */,
 				8F09ECDC1EF29F1900F85D71 /* LaunchScreen.storyboard */,
 				8F09ECDF1EF29F1900F85D71 /* Info.plist */,
@@ -456,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B1A74A31F0292120047B3E0 /* KeyBoardToolBar.swift in Sources */,
 				8F09ECD91EF29F1900F85D71 /* KIGitTrending.xcdatamodeld in Sources */,
 				9B95B7E81EFABA6000678112 /* ListViewController.swift in Sources */,
 				9B4293061EFF4E600010B9F4 /* GitData.swift in Sources */,
